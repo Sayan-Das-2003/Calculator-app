@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.calculator{
+    background:linear-gradient(black,rgba(50, 49, 49, 0.473));
+    width: 100%;
+    max-width: 375px;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+.screen{
+    min-height: 200px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    text-align: right;
+    flex: 1 1 auto;
+}
+.screen>.content>.input{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.screen>.content>.output{
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+.screen>.content>.input>.operator{
+    color:rgb(214 255 66);
+}
+.screen>.content>.input>.brackets,.screen>.content>.input>.percent{
+    color:rgb(169, 218, 230);
+}
+.keys{
+    background-color: rgb(0 0 0 / 17%);
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 1rem;
+    box-shadow: 0 -2px 16px black;
+}
+.keys .key{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height:0;
+    padding-top: 100%;
+    box-shadow: 0px 0px 8px 5px black;
+    background-color: rgb(0 0 0 / 24%);
+    border-radius: 1rem;
+    transition: 0.3s;
+    user-select: none;
+}
+.keys .key span{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    font-weight: 700;
+    color:white
+}
+.keys .key.operator span{
+    color: orange;
+}
+.keys .key.action span{
+    color: rgb(104, 211, 254);
+}
