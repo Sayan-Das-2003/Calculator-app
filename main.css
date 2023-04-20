@@ -105,6 +105,15 @@
     font-weight: 700;
     color:white
 }
+#loader{
+   position: absolute;
+   top: 25%;
+   left: 25%;
+}
+#loader img{
+    height:50vh;
+    width: 50vw;
+}
 .keys .key.operator span{
     color: orange;
 }

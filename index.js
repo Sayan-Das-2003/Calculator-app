@@ -2,6 +2,9 @@ const keys=document.querySelectorAll('.key');
 const screen_input=document.querySelector('.screen>.content>.input');
 const screen_output=document.querySelector('.screen>.content>.output');
 
+window.onload= function(){
+    document.getElementById("loader").style.display="none";
+}
 let input="";
 let output="";
 for(let key of keys){
