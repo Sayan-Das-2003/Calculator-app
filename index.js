@@ -1,7 +1,10 @@
 const keys=document.querySelectorAll('.key');
 const screen_input=document.querySelector('.screen>.content>.input');
 const screen_output=document.querySelector('.screen>.content>.output');
-
+const calculator=document.querySelector(".calculator");
+const Screen=document.querySelector(".screen");
+const toggle=document.querySelector("#toggle");
+const dark=document.querySelector(".dark");
 window.onload= function(){
     document.getElementById("loader").style.display="none";
 }
@@ -121,3 +124,17 @@ function percentage(input){
     }
     return input_array.join("");
 }
+toggle.addEventListener("change",()=>{
+calculator.classList.toggle("dark");
+if(dark.className=="dark"){
+    dark.className="light";
+    Screen.style.color="black";
+    calculator.style.background="linear-gradient(#fafafa,#e4fcfc)";
+}
+else {
+    dark.className="dark";
+    Screen.style.color="white";
+    calculator.style.background="linear-gradient(black,rgba(50, 49, 49, 0.473))";
+
+}
+});

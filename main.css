@@ -16,6 +16,7 @@
     max-width: 375px;
     min-height: 640px;
     display: flex;
+    transition: 1s;
     flex-direction: column;
     border-radius: 1.5rem;
     overflow: hidden;
@@ -24,6 +25,7 @@
     min-height: 200px;
     padding: 1.5rem;
     display: flex;
+    transition: 0.7s;
     justify-content: flex-end;
     align-items: flex-end;
     color: white;
@@ -44,10 +46,49 @@
 ::-webkit-scrollbar{
     display: none;
 }
-#toggle{
-    position: relative;
+.dark>.toggle>.bxs-sun{
+    color: black;
+    background-color: #ffffff;
+}
+.dark>.toggle>.bx-moon{
+    color: white;
+    background-color: black;
+}
+.light>.toggle{
     transform: translate(19%, -730%);
-    top: 50%;
+    position: absolute;
+    transition: 1s;
+    background: linear-gradient(145deg, #000000cc, #ffffff);
+    border-radius: 6px;
+}
+#input{
+display: none;
+
+}
+.light>.toggle>.bxs-sun{
+    color: #ffffff;
+    transition: 1s;
+    background-color: black;
+}
+.light>.toggle>.bx-moon{
+    color: black;
+    transition: 1s;
+    background-color: #ffffff;
+}
+.dark>.toggle>.bx-moon{
+    transition: 1s;
+    color: whitesmoke;
+}
+.dark>.toggle>.bxs-sun{
+    color: black;
+    transition: 1s;
+    background-color: white;
+}
+.dark>.toggle{
+    transform: translate(19%, -730%);
+    position: absolute;
+    background: linear-gradient(145deg, #ffffff, #000000cc);
+    border-radius: 6px;
 }
 .screen>.content{
     font-size: 3rem;
@@ -57,10 +98,10 @@
     overflow-x: auto;
 }
 .screen>.content>.input>.operator{
-    color:rgb(214 255 66);
+    color:rgb(255 137 16);
 }
 .screen>.content>.input>.brackets,.screen>.content>.input>.percent{
-    color:rgb(169, 218, 230);
+    color:rgb(32 242 71);
 }
 .keys{
     background-color: rgb(0 0 0 / 17%);
@@ -72,9 +113,12 @@
     grid-gap: 1rem;
     box-shadow: 0 -2px 16px black;
 }
+label>input{
+    display: none;
+}
 .keys .key{
     position: relative;
-    cursor: pointer;
+    cursor: none;
     display: block;
     height:0;
     padding-top: 100%;
